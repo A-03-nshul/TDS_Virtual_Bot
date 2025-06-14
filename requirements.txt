@@ -1,4 +1,3 @@
-# api/requirements.txt
 fastapi
 uvicorn
 aiohttp
