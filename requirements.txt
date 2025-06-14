@@ -4,4 +4,4 @@ uvicorn
 aiohttp
 pydantic
 python-multipart
-numpy  # optional, if you truly need it (consider removing)
+python-dotenv
