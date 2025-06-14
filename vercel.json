@@ -11,23 +11,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "excludeFiles": [
-    "scrap.py",
-    "scraper.py",
-    "discourse_posts/**",
-    "notebooks/**",
-    "data/**",
-    "test/**",
-    "*.ipynb",
-    "*.md",
-    "*.pt",
-    "*.onnx",
-    "*.pdf",
-    "*.csv",
-    "*.xlsx",
-    "__pycache__/**",
-    ".env",
-    "requirements-dev.txt"
   ]
 }
