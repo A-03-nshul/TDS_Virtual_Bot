@@ -1,0 +1,15 @@
+scrap.py
+scraper.py
+*.ipynb
+*.md
+*.csv
+*.xlsx
+*.pdf
+*.pt
+*.onnx
+discourse_posts/
+notebooks/
+test/
+__pycache__/
+.env
+requirements-dev.txt
