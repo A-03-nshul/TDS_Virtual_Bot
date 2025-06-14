@@ -17,6 +17,14 @@ import uvicorn
 import traceback
 from dotenv import load_dotenv
 
+load_dotenv()
+# Initialize FastAPI app
+app = FastAPI(title="RAG Query API", description="API for querying the RAG knowledge base")
+@app.get("/")
+def read_root():
+    return {"message": "TDS Virtual TA is live!"}
+
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -25,7 +33,7 @@ logger = logging.getLogger(__name__)
 DB_PATH = "knowledge_base.db"
 SIMILARITY_THRESHOLD = 0.68  # Lowered threshold for better recall
 MAX_RESULTS = 10  # Increased to get more context
-load_dotenv()
+
 MAX_CONTEXT_CHUNKS = 4  # Increased number of chunks per source
 API_KEY = os.getenv("API_KEY")  # Get API key from environment variable
 
@@ -42,11 +50,7 @@ class QueryResponse(BaseModel):
     answer: str
     links: List[LinkInfo]
 
-# Initialize FastAPI app
-app = FastAPI(title="RAG Query API", description="API for querying the RAG knowledge base")
-@app.get("/")
-def read_root():
-    return {"message": "TDS Virtual TA is live!"}
+
 
 # Add CORS middleware
 app.add_middleware(
